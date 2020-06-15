@@ -12,13 +12,13 @@ public class Monster extends Creature {
     public static final Random RAND = new Random();
     private double minDmg, maxDmg, defRate, avoidAtt, dmgRed, defRed, avoidSpell;
     private int dmgRedRounds, defRedRounds, avoidSpellRounds;
-   // public BufferedImage monster;
+    public BufferedImage enemy;
 
     public Monster(String name, String description, int maxHp, int maxAtt, int minAtt, int dexterity, int level) {
     }
 
     public Monster() {
-      // monster  = ImageLoader.loadImage("/images/monster.png");
+        enemy = ImageLoader.loadImage("/images/enemy.png");
     }
 
     @Override
@@ -29,8 +29,8 @@ public class Monster extends Creature {
     @Override
     public void render(Graphics2D g, RenderInfo renderInfo) {
 
-        //g.drawImage(monster, (int) (Game.LEVEL_SCALE*x) , (int)(Game.LEVEL_SCALE*y) , (int)(monster.getWidth()* Game.LEVEL_SCALE)
-             //   ,(int)(monster.getHeight()*Game.LEVEL_SCALE), null);
+        g.drawImage(enemy, (int) (Game.LEVEL_SCALE*x) , (int)(Game.LEVEL_SCALE*y) , (int)(enemy.getWidth()* Game.LEVEL_SCALE)
+                ,(int)(enemy.getHeight()*Game.LEVEL_SCALE), null);
     }
 
     public double getDmgRed() {

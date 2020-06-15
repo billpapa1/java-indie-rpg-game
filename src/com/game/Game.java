@@ -1,6 +1,7 @@
 package com.game;
 
 import com.game.creatures.Hero;
+import com.game.creatures.Monster;
 import com.game.ui.Button;
 import com.game.ui.SimpleButton;
 import com.game.ui.UIElement;
@@ -22,9 +23,10 @@ public class Game extends Canvas implements Runnable {
     private Level level;
     private Font normalFont;
     private Hero hero;
+    private Monster monster;
    // private Camera camera;
    // private  int height , width;
-    public BufferedImage monster;
+    public BufferedImage enemy;
     public BufferedImage player;
 
     private List<UIElement> uiElements = new ArrayList<>();
@@ -96,7 +98,9 @@ public class Game extends Canvas implements Runnable {
         ;
         this.uiElements.add(new SimpleButton(300, 150, 175, 75, "Button"));
         this.hero = new Hero();
+        this.monster = new Monster();
         this.entitiesList.add(hero); // adding hero in the entity list.
+        this.entitiesList.add(monster); // adding monster in the entity list
     }
 
 
@@ -111,7 +115,8 @@ public class Game extends Canvas implements Runnable {
 
     private void init() {
         player = ImageLoader.loadImage("/images/player.png"); // loading players png
-        monster =ImageLoader.loadImage("/images/monster.png");
+        enemy = ImageLoader.loadImage("/images/enemy.png"); // loading enemy png
+       // monster =ImageLoader.loadImage("/images/monster.png");
 
       //  camera = new Camera(0,0);
 
