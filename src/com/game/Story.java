@@ -76,7 +76,7 @@ public class Story {
     public static void printEnd(Player player){
         GameLogic.clearConsole();
         GameLogic.printSeperator(30);
-        System.out.println("Gongratulation, "+ player.name + "! You defeated the mighty Goblin");
+        System.out.println("Gongratulations"+ player.name + " You defeated the mighty Goblin");
         GameLogic.printSeperator(30);
 
     }

@@ -5,10 +5,10 @@ public abstract class Character {
     public String name;
     public int maxHp , hp ,xp ;
     //constructor for character class
-    public Character(String name , int maxHp , int hp){
+    public Character(String name , int maxHp , int xp){
         this.name=name;
         this.maxHp=maxHp;
-        this.hp=hp;
+        this.xp= xp;
         this.hp=maxHp;
 
     }
