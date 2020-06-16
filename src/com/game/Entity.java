@@ -2,9 +2,12 @@ package com.game;
 
 import java.awt.*;
 
-public abstract class   Entity {
-    public float x;
-    public float y;
+public abstract class Entity {
+    protected float x;
+    protected float y;
+
+    protected float sizeX;
+    protected float sizeY;
 
     public Entity() {
         this.x = 0;
@@ -18,9 +21,7 @@ public abstract class   Entity {
 
     public abstract void update(double delta);
 
-
-
-    public abstract void render(Graphics2D g, RenderInfo renderInfo);
+    public abstract void render(Graphics2D g);
 
     public void setX(float x) {
         this.x = x;
@@ -38,5 +39,11 @@ public abstract class   Entity {
         return this.y;
     }
 
+    public void setSizeX(float sizeX) { this.sizeX = sizeX; }
 
+    public float getSizeX() { return this.sizeX; }
+
+    public void setSizeY(float sizeY) { this.sizeY = sizeY; }
+
+    public float getSizeY() { return this.sizeY; }
 }

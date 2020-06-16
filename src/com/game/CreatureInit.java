@@ -1,4 +1,4 @@
-package com.game;
+/*package com.game;
 
 import com.game.creatures.*;
 
@@ -147,3 +147,4 @@ public class CreatureInit {
 
 
 
+*/

@@ -97,10 +97,11 @@ public class Game extends Canvas implements Runnable {
         this.normalFont = new Font("Times New Roman", Font.PLAIN, 30);
         ;
         this.uiElements.add(new SimpleButton(300, 150, 175, 75, "Button"));
-        this.hero = new Hero();
+
         this.monster = new Monster();
-        this.entitiesList.add(hero); // adding hero in the entity list.
+        this.hero = new Hero();
         this.entitiesList.add(monster); // adding monster in the entity list
+        this.entitiesList.add(hero); // adding hero in the entity list.
     }
 
 
@@ -114,11 +115,8 @@ public class Game extends Canvas implements Runnable {
     }
 
     private void init() {
-        player = ImageLoader.loadImage("/images/player.png"); // loading players png
         enemy = ImageLoader.loadImage("/images/enemy.png"); // loading enemy png
-       // monster =ImageLoader.loadImage("/images/monster.png");
-
-      //  camera = new Camera(0,0);
+        player = ImageLoader.loadImage("/images/player.png"); // loading players pngs
 
         Button button = new Button(450, 360, 50, 50, "/images/right arrow.png");
         button.action = () -> {
@@ -155,50 +153,32 @@ public class Game extends Canvas implements Runnable {
 
         Graphics2D g = (Graphics2D) bs.getDrawGraphics();
 
+        float cameraX = -hero.getX() * LEVEL_SCALE + (getWidth() - hero.getSizeX() * LEVEL_SCALE) / 2;
+        float cameraY = -hero.getY() * LEVEL_SCALE + (getHeight() - hero.getSizeY() * LEVEL_SCALE) / 2;
+
+        g.setColor(Color.BLACK);
+        g.fillRect(0, 0, getWidth(), getHeight());
+        g.translate((int)cameraX, (int)cameraY);
 
         //Enable anti-aliasing
         g.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
         g.setFont(normalFont);
+
         // render the background world
         level.draw(g);
-        // Render game
-        // g.setColor(Color.BLACK);
-        //  g.fillRect(0, 0, 784, 700);
 
-        //render outline for text dialogue
-        //   g.setColor(Color.black);
-        //  g.fillRect(0,650,784,300);
-        // g.setBackground(Color.BLACK);
-        //render text Box (dialogue)
-        // g.setColor(Color.orange);
-        //g.fillRect(20,650 , 730,140);
-
-        //render the text
-        //  g.setColor(Color.black);
-        //  g.drawString("DIALOGUE TEXT AREA " , 30 , 700);
-        RenderInfo renderInfo = new RenderInfo();
         for (int i = 0; i < entitiesList.size(); i++) {
-            entitiesList.get(i).render( g , renderInfo  );
-
+            entitiesList.get(i).render(g);
         }
-            for (int j = 0; j < 8; j++) {
-                for (int k = 0; k < 6; k++) {
-                    g.setColor(Color.white);
-                    //g.fillRect(j* 110, k * 110, 100, 100);
-                }
-            }
 
-            for (UIElement element : uiElements) { //draw all the buttons and sticky man
-                element.draw(g);
-            }
-
-            // g.setColor(Color.RED);
-            // g.drawString("Game title", 320, 100); //draw s
-
-            //Display to screen
-            g.dispose();
-            bs.show();
+        for (UIElement element : uiElements) {
+            element.draw(g);
         }
+
+        //Display to screen
+        g.dispose();
+        bs.show();
+    }
 
         private void destroy () {
 
@@ -223,15 +203,6 @@ public class Game extends Canvas implements Runnable {
 
             destroy();
         }
-    //    public Camera getCamera(){
-     //   return camera;
-   //     }
-      //  public int getWidth(){
-     //       return width;
-      //  }
-  //      public int getHeight(){
-   //         return height;
-    //    }
 
         public static void main (String[]args){
             Game game = new Game();

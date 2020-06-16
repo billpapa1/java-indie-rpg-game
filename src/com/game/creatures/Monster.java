@@ -3,7 +3,6 @@ package com.game.creatures;
 
 import com.game.Game;
 import com.game.ImageLoader;
-import com.game.RenderInfo;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -27,10 +26,11 @@ public class Monster extends Creature {
     }
 
     @Override
-    public void render(Graphics2D g, RenderInfo renderInfo) {
+    public void render(Graphics2D g) {
 
-        g.drawImage(enemy, (int) (Game.LEVEL_SCALE*x) , (int)(Game.LEVEL_SCALE*y) , (int)(enemy.getWidth()* Game.LEVEL_SCALE)
+        g.drawImage(enemy, (int) (Game.LEVEL_SCALE*100) , (int)(Game.LEVEL_SCALE*100) , (int)(enemy.getWidth()* Game.LEVEL_SCALE)
                 ,(int)(enemy.getHeight()*Game.LEVEL_SCALE), null);
+
     }
 
     public double getDmgRed() {
@@ -123,52 +123,4 @@ public class Monster extends Creature {
 
 
 
-
-
- /*   public static Monster newRandomMonster() {
-        int random = RAND.nextInt(4) + 1;
-        Monster monster = null;
-        switch (random) {
-            case 1:
-                monster = newMonster();
-                break;
-            case 2:
-                monster = newDragon();
-                break;
-            case 3:
-                monster = newExoskeleton();
-                break;
-            case 4:
-                monster = newSpirit();
-        }
-        return monster;
-    }
-    public static Monster newMonster() {
-        return new Monster("Monster", "he has chances to damage your character , can lose hp , he might have a chance to avoid a hit",
-                30, 10, 3, 5, 3);
-    }
-    public static Monster newDragon() {
-        return new Monster("Dragon", "high amplitute of damage", 100, 30, 20, 2, 5);
-
-    }
-    public static Monster newExoskeleton() {
-        return new Monster("Exoskeleton", "high defense , easy to block and withstand hits", 150, 8, 3, 8, 4);
-
-    }
-    public static Monster newSpirit() {
-        return new Monster("Spirit", "High dexterity , easy to avoid most of the hits. might have some weaknesses", 100, 4, 2, 20, 4);
-
-    }
-    public String getDescription() {
-        return description;
-    }
-    public String getName() {
-        return name;
-    }
-
-    public String toString() {
-        return name + " " + description;
-    }
-}
-*/
 

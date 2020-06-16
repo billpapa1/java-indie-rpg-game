@@ -149,16 +149,12 @@ class Menu {
             hpLabelNumber.setFont(NormalFont);
             hpLabelNumber.setForeground(Color.WHITE);
             playerPanel.add(hpLabelNumber);
-         //   weaponLabel = new JLabel(" ");
-//            weaponLabel.setFont(NormalFont);
-//            weaponLabel.setForeground(Color.WHITE);
-         //   playerPanel.add(weaponLabel);
             weaponLabelNumber = new JLabel();
             weaponLabelNumber.setFont(NormalFont);
             weaponLabelNumber.setForeground(Color.WHITE);
-        //    playerPanel.add(weaponLabelNumber);
 
-            playerSetup();
+
+
 
 
         }
@@ -179,17 +175,6 @@ class Menu {
             }
         }
     }
-
-
-
-    public void playerSetup () {
-            //playerHP = "";
-            //weapon = "";
-          //  weaponLabelNumber.setText(weapon);
-          //  hpLabelNumber.setText(" " + playerHP);
-
-
-        }
 
         public class ScreenHandler implements ActionListener {
             @Override

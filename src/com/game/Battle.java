@@ -1,4 +1,4 @@
-package com.game;
+/*package com.game;
 
 import com.game.creatures.Hero;
 import com.game.creatures.Monster;
@@ -226,3 +226,4 @@ public class Battle implements Runnable  {
 }
 //https://www.bing.com/videos/search?q=a+console+rpg+battle+system+in+java&&view=detail&mid=FBF7C7098F0E0B910F87FBF7C7098F0E0B910F87&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3Da%2520console%2520rpg%2520battle%2520system%2520in%2520java%26qs%3Dn%26form%3DQBVDMH%26sp%3D-1%26pq%3Da%2520console%2520rpg%2520battle%2520system%2520in%2520ja%26sc%3D0-33%26sk%3D%26cvid%3DDF5FDE4D27854BB28ACA7EC9065B7218
 
+*/

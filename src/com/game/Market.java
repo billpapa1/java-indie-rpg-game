@@ -3,7 +3,7 @@ package com.game;
 import com.game.creatures.Hero;
 import com.game.items.Armor;
 import com.game.items.Potion;
-import com.game.items.Show;
+//import com.game.items.Show;
 import com.game.items.Weapon;
 import com.game.spells.FireSpell;
 import com.game.spells.IceSpell;
@@ -152,11 +152,11 @@ public class Market {
                     System.out.println("What would you like to buy then? ");
                     int itemOrSpell = scanner1.nextInt();
                     switch (itemOrSpell){
-                        case 1: Show.showItems(weaponList,armorList,potionList);
-                        Scanner scanner2 = new Scanner(System.in);
-                        System.out.println("So ,are you going to be any items !?");
-                        int buyItem=scanner2.nextInt();
-                        switch (buyItem){
+                      //  case 1: Show.showItems(weaponList,armorList,potionList);
+                   //    Scanner scanner2 = new Scanner(System.in);
+                    //    System.out.println("So ,are you going to be any items !?");
+                    //    int buyItem=scanner2.nextInt();
+                        //switch (buyItem){
                             case 1: //
                                 Scanner scanner3 =new Scanner(System.in);
                                 System.out.println("Would you like an armor , a weapon or a potion? ");
@@ -165,7 +165,7 @@ public class Market {
                     }
                }
         }
-    }
+
 
     private static int getRandomNumberInRange(int min, int max) {
         Random r = new Random();

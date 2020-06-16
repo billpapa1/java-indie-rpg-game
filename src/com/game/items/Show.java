@@ -1,4 +1,4 @@
-package com.game.items;
+/*package com.game.items;
 
 import com.game.creatures.Hero;
 import com.game.creatures.Monster;
@@ -134,3 +134,4 @@ public class Show {
         }
 }
 
+*/
