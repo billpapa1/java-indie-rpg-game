@@ -1,5 +1,7 @@
 package com.game;
 
+import com.game.Physics.AABB;
+import com.game.Physics.IntersectResult;
 import com.game.creatures.Hero;
 import com.game.creatures.Monster;
 import com.game.ui.Button;
@@ -142,6 +144,27 @@ public class Game extends Canvas implements Runnable {
         for (int i = 0; i < entitiesList.size(); i++) {
             entitiesList.get(i).update(delta);
         }
+        //Check for intersections with other entities
+        for (int i = 0; i < entitiesList.size(); i++) {
+            Entity currentEntity = entitiesList.get(i);
+            AABB currentAABB = currentEntity.getBoundingBox();
+
+            for (int j = 0; j < entitiesList.size(); j++) {
+
+                if(i == j) continue;
+
+                Entity otherEntity = entitiesList.get(j);
+                AABB otherAABB = otherEntity.getBoundingBox();
+
+                IntersectResult intersect = currentAABB.intersect(otherAABB);
+                if (!intersect.doesIntersect()) continue;
+
+                currentEntity.onCollideWith(otherEntity);
+                otherEntity.onCollideWith(currentEntity);
+            }
+        }
+        //Update scene
+        level.update(entitiesList, delta);
     }
 
     private void render() {

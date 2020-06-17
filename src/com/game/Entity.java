@@ -1,5 +1,7 @@
 package com.game;
 
+import com.game.Physics.AABB;
+
 import java.awt.*;
 
 public abstract class Entity {
@@ -22,6 +24,12 @@ public abstract class Entity {
     public abstract void update(double delta);
 
     public abstract void render(Graphics2D g);
+
+    public void onCollideWith(Entity other) {}
+
+    public AABB getBoundingBox() {
+        return new AABB(x, y, sizeX, sizeY);
+    }
 
     public void setX(float x) {
         this.x = x;

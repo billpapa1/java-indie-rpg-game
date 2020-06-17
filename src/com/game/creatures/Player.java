@@ -11,7 +11,7 @@ public class Player extends Character{
     int  money  , rests , potions;
    private String[] atkUpgrades = {"  Strength  , agility "};
    private String[] defUpgrades = {"  dexterity   ,  Scale armor  "};
-   private String[] swords = {"The mighty dragonblade sword"};
+   private final String[] swords = {"The mighty dragonblade sword"};
     private Object FireSpell;
 
     public Player (String name){ // calling constructor of superclass
@@ -39,6 +39,38 @@ public class Player extends Character{
       //  FireSpell =
     }
 
+    public int getNumAtkUpgrades() {
+        return numAtkUpgrades;
+    }
+
+    public void setNumAtkUpgrades(int numAtkUpgrades) {
+        this.numAtkUpgrades = numAtkUpgrades;
+    }
+
+    public int getNumDefUpgrades() {
+        return numDefUpgrades;
+    }
+
+    public void setNumDefUpgrades(int numDefUpgrades) {
+        this.numDefUpgrades = numDefUpgrades;
+    }
+
+    public String[] getAtkUpgrades() {
+        return atkUpgrades;
+    }
+
+    public void setAtkUpgrades(String[] atkUpgrades) {
+        this.atkUpgrades = atkUpgrades;
+    }
+
+    public String[] getDefUpgrades() {
+        return defUpgrades;
+    }
+
+    public void setDefUpgrades(String[] defUpgrades) {
+        this.defUpgrades = defUpgrades;
+    }
+
     public void chooseTrait(){
         GameLogic.clearConsole();
         GameLogic.printHeading("Choose a trait for your player");
@@ -57,4 +89,7 @@ public class Player extends Character{
 
     }
 
+    public String[] getSwords() {
+        return swords;
+    }
 }

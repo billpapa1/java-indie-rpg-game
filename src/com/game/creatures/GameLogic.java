@@ -109,11 +109,11 @@ public class GameLogic {
         System.out.println("Number of potions: " + player.potions);
         printSeperator(20);
         if (player.numAtkUpgrades > 0) {
-            System.out.println("Offensive Attributes :" + player.atkUpgrades[player.numAtkUpgrades - 1]);
+            System.out.println("Offensive Attributes :" + player.getAtkUpgrades()[player.numAtkUpgrades - 1]);
             printSeperator(20);
         }
         if (player.numDefUpgrades > 0) {
-            System.out.println("Defensive Attribute" + player.defUpgrades[player.numDefUpgrades - 1]);
+            System.out.println("Defensive Attribute" + player.getDefUpgrades()[player.numDefUpgrades - 1]);
         }
         anythingToContinue();
 
@@ -193,7 +193,7 @@ public class GameLogic {
         clearConsole();
         printHeading("While wandering you found an old cabin , you can hear someone whistling joyfully. Its time for shopping");
         int price = (int) (Math.random() * (10 + player.potions * 3) + 10 + player.potions);
-        System.out.println(Arrays.toString(player.swords) + price + "gold.");
+        System.out.println(Arrays.toString(player.getSwords()) + price + "gold.");
         printSeperator(20);
         System.out.println("This is a fire sale today , this sword is unbreakable! , Would you like to buy it? \n (1) Yes! \n(2)No Thanks ");
         int input2 = readInt("->", 2);
