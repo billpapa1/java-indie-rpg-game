@@ -29,7 +29,7 @@ public  class Hero extends Creature {
 
     public void render(Graphics2D g) {
         g.drawImage(player, (int)(Game.LEVEL_SCALE * x), (int)(Game.LEVEL_SCALE * y),
-                (int)(sizeY * Game.LEVEL_SCALE), (int)(sizeX * Game.LEVEL_SCALE), null);
+                (int)(sizeX * Game.LEVEL_SCALE), (int)(sizeY * Game.LEVEL_SCALE), null);
     }
 
     @Override
@@ -41,15 +41,15 @@ public  class Hero extends Creature {
         }
 
         if (Game.pressedKeys.contains(VK_A)) {
-            x -=speed * delta;
+            x -= speed * delta;
         }
 
         if (Game.pressedKeys.contains(VK_D)) {
-            x +=speed * delta;
+            x += speed * delta;
         }
 
         if (Game.pressedKeys.contains(VK_S)) {
-            y +=speed * delta;
+            y += speed * delta;
         }
     }
 }

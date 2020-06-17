@@ -12,8 +12,8 @@ public abstract class Entity {
     protected float sizeY;
 
     public Entity() {
-        this.x = 0;
-        this.y = 0;
+        this.x = 250;
+        this.y = 250;
     }
 
     public Entity(int x, int y) {

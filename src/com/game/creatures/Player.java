@@ -2,6 +2,7 @@ package com.game.creatures;
 
 
 import com.game.spells.FireSpell;
+import com.game.spells.IceSpell;
 import com.game.spells.Spell;
 
 import java.util.Scanner;
@@ -12,7 +13,8 @@ public class Player extends Character{
    private String[] atkUpgrades = {"  Strength  , agility "};
    private String[] defUpgrades = {"  dexterity   ,  Scale armor  "};
    private final String[] swords = {"The mighty dragonblade sword"};
-    private Object FireSpell;
+    private Spell FireSpell;
+    private Spell IceSpell;
 
     public Player (String name){ // calling constructor of superclass
         super(name, 100, 0);
@@ -36,7 +38,8 @@ public class Player extends Character{
 
     @Override
     public void spells() {
-      //  FireSpell =
+      // FireSpell = getRed
+   //  IceSpell = (int)
     }
 
     public int getNumAtkUpgrades() {

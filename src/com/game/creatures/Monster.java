@@ -18,6 +18,11 @@ public class Monster extends Creature {
 
     public Monster() {
         enemy = ImageLoader.loadImage("/images/enemy.png");
+
+        this.x = 120;
+        this.y = 128;
+        this.sizeX = enemy.getWidth();
+        this.sizeY = enemy.getHeight();
     }
 
     @Override
@@ -27,10 +32,8 @@ public class Monster extends Creature {
 
     @Override
     public void render(Graphics2D g) {
-
-        g.drawImage(enemy, (int) (Game.LEVEL_SCALE*100) , (int)(Game.LEVEL_SCALE*100) , (int)(enemy.getWidth()* Game.LEVEL_SCALE)
-                ,(int)(enemy.getHeight()*Game.LEVEL_SCALE), null);
-
+        g.drawImage(enemy, (int)(Game.LEVEL_SCALE * x), (int)(Game.LEVEL_SCALE * y),
+                (int)(sizeX * Game.LEVEL_SCALE), (int)(sizeY * Game.LEVEL_SCALE), null);
     }
 
     public double getDmgRed() {

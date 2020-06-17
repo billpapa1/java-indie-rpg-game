@@ -4,7 +4,7 @@ public class FireSpell extends Spell{
 
 
     private double defRed;
-    public double getDefRed(){  //getter (accessor) method to access-->
+    private double getDefRed(){  //getter (accessor) method to access-->
         //the defense reduction made from the fire spell
         return defRed;
     }

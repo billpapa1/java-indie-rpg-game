@@ -32,7 +32,7 @@ public class Enemy extends Character {
 
     @Override
     public void spells() {
-        Spell firespell= new Spell();
+
 
     }
 
