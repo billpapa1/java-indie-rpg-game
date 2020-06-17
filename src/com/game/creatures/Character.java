@@ -20,6 +20,7 @@ public abstract class Character {
     // the methods , abilities the characters have
     public abstract int attack();
     public abstract int defend();
+    public abstract void spells();
 
 
 

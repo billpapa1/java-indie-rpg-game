@@ -96,7 +96,7 @@ public class Game extends Canvas implements Runnable {
 
         this.normalFont = new Font("Times New Roman", Font.PLAIN, 30);
         ;
-        this.uiElements.add(new SimpleButton(300, 150, 175, 75, "Button"));
+     //   this.uiElements.add(new SimpleButton(300, 150, 175, 75, "Button"));
 
         this.monster = new Monster();
         this.hero = new Hero();
@@ -118,20 +118,20 @@ public class Game extends Canvas implements Runnable {
         enemy = ImageLoader.loadImage("/images/enemy.png"); // loading enemy png
         player = ImageLoader.loadImage("/images/player.png"); // loading players pngs
 
-        Button button = new Button(450, 360, 50, 50, "/images/right arrow.png");
-        button.action = () -> {
-        };
-        uiElements.add(button);
+     //   Button button = new Button(450, 360, 50, 50, "/images/right arrow.png");
+       // button.action = () -> {
+  //      };
+      //  uiElements.add(button);
         this.level = new Level(0, 0, "/images/background_world.png");
 
-        Button button1 = new Button(355, 260, 50, 50, "/images/up arrow.png");
-        uiElements.add(button1);
+        //Button button1 = new Button(355, 260, 50, 50, "/images/up arrow.png");
+      //  uiElements.add(button1);
 
-        Button button2 = new Button(260, 360, 50, 50, "/images/left arrow.png");
-        uiElements.add(button2);
+      //  Button button2 = new Button(260, 360, 50, 50, "/images/left arrow.png");
+       // uiElements.add(button2);
 
-        Button button3 = new Button(350, 450, 50, 50, "/images/down arrow.png");
-        uiElements.add(button3);
+     //   Button button3 = new Button(350, 450, 50, 50, "/images/down arrow.png");
+       //uiElements.add(button3);
     }
 
     private void update(double delta) {

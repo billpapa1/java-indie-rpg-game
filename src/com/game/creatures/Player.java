@@ -1,14 +1,19 @@
 package com.game.creatures;
 
 
+import com.game.spells.FireSpell;
+import com.game.spells.Spell;
+
 import java.util.Scanner;
 
 public class Player extends Character{
     public int numAtkUpgrades, numDefUpgrades;
     int  money  , rests , potions;
-   public String[] atkUpgrades = {"  Strength  , agility "};
-   public String[] defUpgrades = {"  dexterity   ,  Scale armor  "};
-   public String[] swords = {"The mighty dragonblade sword"};
+   private String[] atkUpgrades = {"  Strength  , agility "};
+   private String[] defUpgrades = {"  dexterity   ,  Scale armor  "};
+   private String[] swords = {"The mighty dragonblade sword"};
+    private Object FireSpell;
+
     public Player (String name){ // calling constructor of superclass
         super(name, 100, 0);
         this.numAtkUpgrades=0;
@@ -28,6 +33,12 @@ public class Player extends Character{
     public int defend() {
         return (int) (Math.random()*(xp/4 + numDefUpgrades*3 +7)+xp/10 + numDefUpgrades*2+numAtkUpgrades+1 );
     }
+
+    @Override
+    public void spells() {
+      //  FireSpell =
+    }
+
     public void chooseTrait(){
         GameLogic.clearConsole();
         GameLogic.printHeading("Choose a trait for your player");
@@ -42,7 +53,8 @@ public class Player extends Character{
             GameLogic.printHeading("You chose"+ defUpgrades[numDefUpgrades]+"!");
             numDefUpgrades++;
         }
-        GameLogic   .anythingToContinue();
+        GameLogic.anythingToContinue();
 
     }
+
 }
