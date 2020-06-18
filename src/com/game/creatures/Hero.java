@@ -1,23 +1,15 @@
 package com.game.creatures;
-import com.game.Entity;
+
 import com.game.Game;
 import com.game.ImageLoader;
-import com.game.items.Armor;
-import com.game.items.Potion;
-import com.game.items.Weapon;
-import com.game.spells.FireSpell;
-import com.game.spells.IceSpell;
-import com.game.spells.LightingSpell;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-import java.util.List;
+
 
 import static java.awt.event.KeyEvent.*;
 
-public  class Hero extends Creature {
+public class Hero extends Creature {
     private BufferedImage player;
 
     public Hero() {
@@ -41,15 +33,15 @@ public  class Hero extends Creature {
         }
 
         if (Game.pressedKeys.contains(VK_A)) {
-            x -= speed * delta;
+            x -=speed * delta;
         }
 
         if (Game.pressedKeys.contains(VK_D)) {
-            x += speed * delta;
+            x +=speed * delta;
         }
 
         if (Game.pressedKeys.contains(VK_S)) {
-            y += speed * delta;
+            y +=speed * delta;
         }
     }
 }

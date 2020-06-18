@@ -1,12 +1,12 @@
 package com.game.creatures;
 
-
 import com.game.Game;
 import com.game.ImageLoader;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.Random;
+
 public class Monster extends Creature {
     public static final Random RAND = new Random();
     private double minDmg, maxDmg, defRate, avoidAtt, dmgRed, defRed, avoidSpell;
@@ -19,8 +19,8 @@ public class Monster extends Creature {
     public Monster() {
         enemy = ImageLoader.loadImage("/images/enemy.png");
 
-        this.x = 120;
-        this.y = 128;
+        this.x = 100;
+        this.y = 100;
         this.sizeX = enemy.getWidth();
         this.sizeY = enemy.getHeight();
     }
@@ -115,15 +115,4 @@ public class Monster extends Creature {
     public void setAvoidSpellRounds(int avoidSpellRounds) {
         this.avoidSpellRounds = avoidSpellRounds;
     }
-
-
 }
-
-
-
-
-
-
-
-
-
