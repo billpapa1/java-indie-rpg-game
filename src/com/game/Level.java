@@ -28,7 +28,7 @@ public class Level {
         this.blocks.add(new AABB(246, 152, 2, 2)); //Mail box under main house
         this.blocks.add(new AABB(297, 152, 5, 1)); //Sign in front of main house (near mail box)
         this.blocks.add(new AABB(180, 200,2,2)); // Second sign under the main house (under the road)
-        this.blocks.add(new AABB( 105, 233,20,1)); // Bench under the main house (under the road) (PARK)
+        this.blocks.add(new AABB( 100, 233,24,1)); // Bench under the main house (under the road) (PARK)
         this.blocks.add(new AABB( 225,0, 90,115)); // house in the middle
         this.blocks.add(new AABB(195, 55, 1, 70)); //STAIRS main house over
         this.blocks.add(new AABB(195,55,25,1));   //STAIRS main house   side
@@ -75,17 +75,52 @@ public class Level {
         this.blocks.add(new AABB( 0, 123,15,30)); // TRESS left side
         this.blocks.add(new AABB( 40, 119,25,30)); // TRESS left side
         this.blocks.add(new AABB( 47, 112,12,9)); // TRESS left side (top addition)
-        this.blocks.add(new AABB( 0, 70,6,34)); // Mail box house on the right top
-        this.blocks.add(new AABB( 80, 190,7,27)); // TREE OVER the bench under the road
-        this.blocks.add(new AABB( 0, 300,23,100)); // Mail box house on the right top
-        this.blocks.add(new AABB( 20, 310,7,20)); // Mail box house on the right top
-        this.blocks.add(new AABB( 20, 360,9,40)); // Mail box house on the right top
-        this.blocks.add(new AABB( 20, 380,15,20)); // Mail box house on the right top
-        this.blocks.add(new AABB( 75, 365,10,35)); // Mail box house on the right top
-        this.blocks.add(new AABB( 60, 385,40,12)); // Mail box house on the right top
-        this.blocks.add(new AABB( 65, 373,28,12)); // Mail box house on the right top
-        this.blocks.add(new AABB( 125, 390,50,10)); // Mail box house on the right top
-
+        this.blocks.add(new AABB( 0, 70,6,34)); // TREES BOTTOM LEFT
+        this.blocks.add(new AABB( 80, 190,7,27)); // TREES BOTTOM LEFT
+        this.blocks.add(new AABB( 0, 300,23,100)); // TREES BOTTOM LEFT
+        this.blocks.add(new AABB( 20, 310,7,20)); // TREES BOTTOM LEFT
+        this.blocks.add(new AABB( 20, 360,9,40)); // TREES BOTTOM LEFT
+        this.blocks.add(new AABB( 20, 380,15,20)); // TREES BOTTOM LEFT
+        this.blocks.add(new AABB( 75, 365,10,35)); // TREES BOTTOM LEFT
+        this.blocks.add(new AABB( 60, 385,40,12)); //TREES BOTTOM LEFT
+        this.blocks.add(new AABB( 65, 373,28,12)); // TREES BOTTOM LEFT
+        this.blocks.add(new AABB( 125, 394,127,6)); //POND (RIVER )BOTTOM
+        this.blocks.add(new AABB( 167, 325,5,28)); //TREES OVER THE POND (RIVER )BOTTOM
+        this.blocks.add(new AABB( 205, 325,5,28)); //TREES OVER THE POND (RIVER )BOTTOM
+        this.blocks.add(new AABB( 280, 385,8,15)); //TREES BOTTOM LINE AFTER THE POND (ON THE RIGHT) /PERPENDICULAR
+        this.blocks.add(new AABB( 272, 393,23,7)); //TREES BOTTOM LINE AFTER THE POND (ON THE RIGHT) / SIDE
+        this.blocks.add(new AABB( 315, 393,27,7)); //TREES BOTTOM LINE AFTER THE POND (ON THE RIGHT) / SIDE 2nd
+        this.blocks.add(new AABB( 325, 379,8,18)); //TREES BOTTOM LINE AFTER THE POND (ON THE RIGHT) /PERPENDICULAR 2nd
+        this.blocks.add(new AABB( 318, 385,20,8)); //TREES BOTTOM LINE AFTER THE POND (ON THE RIGHT) /PERPENDICULAR 2nd addition
+        this.blocks.add(new AABB( 365, 394,11,6)); //TREE BOTTOM MID LINE (AFTER THEE POND AND THE TREES ( SMALL ONE)
+        this.blocks.add(new AABB( 405, 365,11,30)); //BIG TREE AFTER THE SMALL TREE
+        this.blocks.add(new AABB( 400, 376,24,24)); //BIG TREE / PERPENDICULAR
+        this.blocks.add(new AABB( 395, 389,37,11)); //BIG TREE PERPENDICULAR
+        this.blocks.add(new AABB( 505, 362,15,29)); //BIG TREE RIGHT SIDE
+        this.blocks.add(new AABB( 498, 376,29,24)); //BIG TREE RIGHT SIDE PERPE
+        this.blocks.add(new AABB( 494, 389,40,11)); //BIG TREE RIGHT SIDE PERPE
+        this.blocks.add(new AABB( 455, 385,21,15)); //SMALLER TREE IN THE MIDDLE OF 2 BIG ONES RIGHT SIDE
+        this.blocks.add(new AABB( 461, 380,12,5)); //SMALLER TREE IN THE MIDDLE OF 2 BIG ONES RIGHT SIDE
+        this.blocks.add(new AABB( 545, 393,27,7)); //MEDIUM tree right side after the big ones
+        this.blocks.add(new AABB( 555, 379,8,18)); //MEDIUM tree right side after the big ones
+        this.blocks.add(new AABB( 550, 385,20,8)); //MEDIUM tree right side after the big ones
+        this.blocks.add(new AABB( 590, 385,20,10)); //A BIT SMALLER TREE AFTER THE MID ONE
+        this.blocks.add(new AABB( 585, 393,27,7)); //A BIT SMALLER TREE AFTER THE MID ONE
+        this.blocks.add(new AABB( 630, 390,33,10)); //MEDIUM to big  tree right side after the big ones
+        this.blocks.add(new AABB( 638, 370,14,25)); //MEDIUM to big  tree right side after the big ones
+        this.blocks.add(new AABB( 633, 382,27,10)); //MEDIUM to big tree right side after the big ones
+        this.blocks.add(new AABB( 680, 390,20,10)); //BIG TRESS BOTTOM LEFT CORNER
+        this.blocks.add(new AABB( 676, 370,14,25)); //BIG TRESS BOTTOM LEFT CORNER
+        this.blocks.add(new AABB( 673, 360,27,10)); //BIG TRESS BOTTOM LEFT CORNER
+        this.blocks.add(new AABB( 668, 306,25,10)); //BIG TRESS BOTTOM LEFT CORNER over the corner one
+        this.blocks.add(new AABB( 658, 316,28,30)); //BIG TRESS BOTTOM LEFT CORNER over the corner one
+        this.blocks.add(new AABB( 658, 328,30,20)); //BIG TRESS BOTTOM LEFT CORNER over the corner one
+        this.blocks.add(new AABB( 680, 290,20,21)); //BIG TREE SIDE BY SIDE RIGHT SIDE
+        this.blocks.add(new AABB( 695, 215,5,80)); //BIG TREE SIDE BY SIDE RIGHT SIDE
+        this.blocks.add(new AABB( 690, 225,5,35)); //BIG TREE SIDE BY SIDE RIGHT SIDE
+        this.blocks.add(new AABB( 567, 308,2,2)); //SIGN UNDER THE HOUSE RIGHT SIDE
+        this.blocks.add(new AABB( 582, 350,1,1)); //LANTERN RIGHT SIDE
+        this.blocks.add(new AABB( 300, 348,1,1)); //LANTERN MID SIDE LEFT
 
 
 
