@@ -2,6 +2,7 @@ package com.game;
 
 import com.game.Physics.AABB;
 import com.game.Physics.IntersectResult;
+import com.game.creatures.Hero;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -11,6 +12,7 @@ import java.util.List;
 public class Level {
     private BufferedImage image;
     private ArrayList<AABB> blocks;
+    private Hero hero;
 
     private boolean showColliders;
 
@@ -45,7 +47,7 @@ public class Level {
         this.blocks.add(new AABB( 425, 65,25,15)); //TREE right side of the map (second house left top)
         this.blocks.add(new AABB( 400, 0,20,5)); //TREE on top right side
         this.blocks.add(new AABB( 330, 0,40,10)); //TREE on top right side
-        this.blocks.add(new AABB( 370, 20,30,15)); //Bench right top middle of main house and right house
+        this.blocks.add(new AABB( 370, 20,30,1)); //Bench right top middle of main house and right house
         this.blocks.add(new AABB( 470, 0,90,90)); // House on the right top
         this.blocks.add(new AABB( 463, 120,2,2)); // Mail box house on the right top
         this.blocks.add(new AABB( 420, 119,2,2)); // Sign in front of house on the right top
@@ -119,12 +121,14 @@ public class Level {
         this.blocks.add(new AABB( 695, 215,5,80)); //BIG TREE SIDE BY SIDE RIGHT SIDE
         this.blocks.add(new AABB( 690, 225,5,35)); //BIG TREE SIDE BY SIDE RIGHT SIDE
         this.blocks.add(new AABB( 567, 308,2,2)); //SIGN UNDER THE HOUSE RIGHT SIDE
+        this.blocks.add(new AABB( 567, 308,2,2)); //SIGN UNDER THE HOUSE RIGHT SIDE
         this.blocks.add(new AABB( 582, 350,1,1)); //LANTERN RIGHT SIDE
-        this.blocks.add(new AABB( 300, 348,1,1)); //LANTERN MID SIDE LEFT
+        this.blocks.add(new AABB( 300, 348,1,1)); //LANTERN MID SIDE LEFTf
 
 
 
-        this.showColliders = true;
+
+        this.showColliders = false;
     }
 
     public void update(List<Entity> entities, double delta) {
@@ -139,6 +143,9 @@ public class Level {
 
                 currentEntity.x += intersect.getDistanceX();
                 currentEntity.y += intersect.getDistanceY();
+
+
+
             }
         }
     }

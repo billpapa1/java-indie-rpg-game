@@ -14,12 +14,16 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+
 public class Game extends Canvas implements Runnable {
     private boolean isRunning = false;
     private Thread thread;
 
     private Level level;
     private Hero hero;
+    private Monster monster;
+
+
     private List<Entity> entitiesList = new ArrayList<>();
 
     private List<UIElement> uiElements = new ArrayList<>();
@@ -128,6 +132,7 @@ public class Game extends Canvas implements Runnable {
                 IntersectResult intersect = currentAABB.intersect(otherAABB);
                 if (!intersect.doesIntersect()) continue;
 
+
                 currentEntity.onCollideWith(otherEntity);
                 otherEntity.onCollideWith(currentEntity);
             }
@@ -166,10 +171,12 @@ public class Game extends Canvas implements Runnable {
             element.draw(g);
         }
 
+
         //Display to screen
         g.dispose();
         bs.show();
     }
+
 
     private void destroy () {
 

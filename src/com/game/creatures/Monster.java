@@ -13,6 +13,14 @@ public class Monster extends Creature {
     private int dmgRedRounds, defRedRounds, avoidSpellRounds;
     public BufferedImage enemy;
 
+    public BufferedImage getEnemy(int x) {
+        return enemy;
+    }
+
+    public void setEnemy(BufferedImage enemy) {
+        this.enemy = enemy;
+    }
+
     public Monster(String name, String description, int maxHp, int maxAtt, int minAtt, int dexterity, int level) {
     }
 
