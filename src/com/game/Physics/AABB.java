@@ -2,7 +2,7 @@ package com.game.Physics;
 
 import com.game.Game;
 import com.game.creatures.Hero;
-
+//AXIS ALIGNED BOUNDING BOX -> AxisAlignedBoundingBox
 public class AABB {
     private float x;
     private float y;
@@ -37,6 +37,8 @@ public class AABB {
             if(Math.abs(minDistX) < Math.abs(minDistY)) return new IntersectResult(minDistX, 0, true);
             else return new IntersectResult(0, minDistY, true);
         }
+
+        System.out.println("BATTLE!!!!!");
 
         return new IntersectResult(0, 0, false);
     }

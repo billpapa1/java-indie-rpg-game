@@ -11,8 +11,8 @@ public class popUpBox {
     Container con;
     JButton Button1, Button2, Button3, Button4;
     JTextArea intro, text;
-    JPanel textPanel, ButtonPanel, introPanel, labelPanel;
-    JLabel Label;
+    JPanel textPanel, ButtonPanel, introPanel, labelPanel, panel;
+    JLabel label;
     ScreenHandler screenHandler = new ScreenHandler();
     Font NormalFont = new Font("Times New Roman", Font.PLAIN, 30);
 
@@ -31,12 +31,12 @@ public class popUpBox {
         con = window.getContentPane();
 
         //title label
-        labelPanel = new JPanel();
-        labelPanel.setBounds(100, 100, 600, 150);
-        labelPanel.setBackground(Color.BLACK);
-        Label = new JLabel("INTERACTION");
-        Label.setForeground(Color.WHITE);
-        Label.setFont(NormalFont);
+        panel = new JPanel();
+        panel.setBounds(100, 100, 600, 150);
+        panel.setBackground(Color.BLACK);
+        label= new JLabel("INTERACTION");
+        label.setForeground(Color.WHITE);
+        label.setFont(NormalFont);
         //creating the button panel
         ButtonPanel = new JPanel();
         ButtonPanel.setBounds(300, 400, 200, 100);
@@ -81,16 +81,12 @@ public class popUpBox {
         text.setBackground(Color.BLACK);
         text.setForeground(Color.WHITE);
         text.setFont(NormalFont);
-        ButtonPanel.add(Button1);
-        ButtonPanel.add(Button2);
-        ButtonPanel.add(Button3);
-        ButtonPanel.add(Button4);
-        labelPanel.add(Label);
-        textPanel.add(text);
-        con.add(labelPanel);
-        con.add(ButtonPanel);
-        con.add(textPanel);
 
+
+        panel.add(label);
+        ButtonPanel.add(Button1);
+        con.add(panel);
+        con.add(ButtonPanel);
 
     }
 
